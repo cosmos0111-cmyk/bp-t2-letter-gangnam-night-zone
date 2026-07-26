@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트렌드 리포트 | 서울 야간 상권의 패러다임 시프트와 객관적 지표</title>
+    <meta name="description" content="서울 주요 상권의 업종별 밀집도와 특징을 객관적인 지표로 분석합니다. 셔츠룸, 룸싸롱, 가라오케 등 다양한 업종의 차이점과 선택 기준을 제공하는 전문 정보 블로그입니다.">
+    <meta name="keywords" content="유흥 상권 정보, 서울 상권 분석, 셔츠룸, 룸싸롱, 가라오케, 하이퍼블릭, 쩜오, 텐카페, 비즈니스클럽">
+    <link rel="canonical" href="https://letter.gangnam-night-zone.xyz/blog-3.html">
+    
+    <!-- Open Graph & Twitter Card -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="서울 야간 상권 트렌드: 투명성과 효율성이 재편하는 시장 구조">
+    <meta property="og:description" content="베일에 싸여 있던 유흥 상권의 정보 비대칭이 해소되고 있습니다. 셔츠룸부터 가라오케까지, 데이터가 증명하는 최신 소비 트렌드를 공개합니다.">
+    <meta property="og:url" content="https://letter.gangnam-night-zone.xyz/blog-3.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80">
+    
+    <style>
+        /* Noir-Gold Design System & Editorial Apple Style */
+        :root {
+            --bg-primary: #0a0a0c;
+            --bg-secondary: #121214;
+            --bg-tertiary: #1a1a1e;
+            --accent-gold: #d4af37;
+            --accent-gold-hover: #f3e5ab;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --text-muted: #6e6e73;
+            --border-color: #2c2c2e;
+            --max-width: 1100px;
+            --font-serif: "Times New Roman", Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro KR", "SF Pro Display", "Malgun Gothic", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.625;
+            letter-spacing: -0.02em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-gold);
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Hamburger Menu (Mobile) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: var(--text-primary);
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 24px 80px;
+            background: linear-gradient(180deg, rgba(20, 20, 25, 0.8) 0%, rgba(10, 10, 12, 1) 100%);
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-gold);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .hero-title span {
+            color: transparent;
+            -webkit-text-stroke: 1px var(--text-primary);
+        }
+
+        .hero-desc {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        /* Layout Grid */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Editorial Section Grid */
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 64px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 900px) {
+            .editorial-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+
+        /* Main Article */
+        .article-main {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .article-meta .category {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .article-lead {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .article-body {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .article-body p strong {
+            color: var(--text-primary);
+        }
+
+        .article-body blockquote {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 32px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--accent-gold);
+            margin: 24px 0;
+            position: relative;
+        }
+
+        /* Sidebar / Secondary Content */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .sidebar-widget {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 32px;
+            border-radius: 12px;
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .trend-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .trend-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .trend-rank {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .trend-link {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .trend-link:hover {
+            color: var(--accent-gold);
+        }
+
+        .trend-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Card Section (Grid) */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-align: left;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-gold);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-gold);
+        }
+
+        .card-content {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .card-btn {
+            align-self: flex-start;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.2s ease;
+        }
+
+        .card-btn:hover {
+            gap: 12px;
+            color: var(--accent-gold-hover);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 32px 20px;
+            }
+        }
+
+        .faq-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 32px;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, #1c1c22 0%, #0a0a0c 100%);
+            border: 1px solid var(--accent-gold);
+            border-radius: 16px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .cta-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: var(--bg-primary);
+            padding: 16px 36px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+
+        .footer-info {
+            max-width: 400px;
+        }
+
+        .footer-info p {
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 64px;
+        }
+
+        @media (max-width: 600px) {
+            .footer-nav {
+                gap: 32px;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-nav-col h4 {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-nav-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-nav-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-nav-col a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 140px 20px 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">Gangnam Night Zone</a>
+            <button class="menu-toggle" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/trend" class="active">트렌드</a></li>
+                <li><a href="/analysis">상권 분석</a></li>
+                <li><a href="/guide">업종 가이드</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <p class="hero-tag">Trend & Analysis</p>
+        <h1 class="hero-title">정보의 불균형을 허물다,<br><span>서울 야간 상권</span>의 대전환</h1>
+        <p class="hero-desc">감추어진 정보가 아닌, 객관적 데이터와 시장의 실제 흐름을 바탕으로 서울 주요 상권의 현재와 미래 트렌드를 투명하게 짚어냅니다.</p>
+    </section>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Editorial Grid (Main Feature + Sidebar) -->
+        <div class="editorial-grid">
+            
+            <!-- Left: Heavy Editorial Article -->
+            <article class="article-main">
+                <div>
+                    <div class="article-meta">
+                        <span class="category">Trend Analysis</span>
+                        <span>•</span>
+                        <span>2024년 10월 업데이트</span>
+                    </div>
+                    <h2 class="article-title">소비 양극화와 '정찰제'의 부상: 우리가 알던 유흥 시장의 종말</h2>
+                    
+                    <div class="article-lead">
+                        "더 이상 깜깜이 요금은 통하지 않는다." 서울 야간 상권은 이제 '투명성'이라는 피할 수 없는 흐름을 맞이하고 있습니다.
+                    </div>
+
+                    <div class="article-body">
+                        <p>과거 서울의 주요 야간 상권, 특히 강남과 여의도 일대는 폐쇄적인 정보 공유와 복잡한 요금 체계가 지배하는 시장이었습니다. 이른바 <strong>'정보 비대칭성'</strong>이 업소의 권력이자 경쟁력이었던 시대였습니다. 그러나 최근 스마트폰 기반의 플랫폼 활성화와 투명한 정보 제공 요구가 거세지면서, 시장의 패러다임이 송두리째 바뀌고 있습니다.</p>
+                        
+                        <p>가장 눈에 띄는 변화는 <strong>'정찰제 형태의 시스템'</strong>을 차용한 업종들의 급성장입니다. 대표적인 예로 가라오케, 셔츠룸, 하이퍼블릭 등이 있습니다. 이들은 과거 전통적인 룸싸롱이나 비즈니스클럽이 고수하던 복잡하고 모호한 주류 가격 책정 방식을 탈피하여, 시간당 정해진 테이블 비용과 주류 가격을 명시하는 방식을 채택했습니다. 소비자들은 이제 자신이 지불해야 할 금액을 사전에 명확히 인지하고 소비를 결정합니다.</p>
+
+                        <blockquote>
+                            "소비자는 더 이상 모험을 원하지 않습니다. 자신이 지불한 가치만큼의 명확한 서비스를 즉각적으로 받기를 원할 뿐입니다. 이것이 셔츠룸과 하이퍼블릭이 강남권역에서 빠르게 안착한 본질적인 원인입니다."
+                        </blockquote>
+
+                        <p>반면, 고비용 구조를 지닌 하이엔드 업종(쩜오, 텐카페 등)은 철저히 멤버십과 프라이빗 마케팅을 강화하며 초고가 시장으로 축소 재편되고 있습니다. 어설픈 중간 가격대의 업소들이 설 자리를 잃고 빠르게 폐업의 길로 들어서는 <strong>'소비 양극화 현상'</strong>이 뚜렷해지고 있는 것입니다.</p>
+
+                        <p>또한, 상권의 지리적 이동도 주목할 만합니다. 전통적인 강남 중심의 소비 형태에서 벗어나 마포, 여의도, 마곡 등 직장인 배후 수요가 탄탄한 지역들이 독자적인 야간 상권 인프라를 구축하며 분산화가 진행되고 있습니다. 각 지역 상권은 해당 지역의 오피스 성격에 맞춘 특화된 업종 구성으로 생존 전략을 도모하고 있습니다.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Right: Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">실시간 상권 이슈</h3>
+                    <ul class="trend-list">
+                        <li class="trend-item">
+                            <span class="trend-rank">ISSUE 01</span>
+                            <a href="/analysis" class="trend-link">강남역-신논현역 벨트, 하이퍼블릭 밀집도 역대 최고치 기록</a>
+                            <p class="trend-desc">기존 셔츠룸 형태에서 진화한 하이퍼블릭 시스템이 강남 상권의 주류로 안착.</p>
+                        </li>
+                        <li class="trend-item">
+                            <span class="trend-rank">ISSUE 02</span>
+                            <a href="/guide" class="trend-link">직장인 회식 문화 변화에 따른 가라오케 업종의 캐주얼화</a>
+                            <p class="trend-desc">접대 중심이 아닌 친목 도모형 캐주얼 모임이 늘어나며 대형 가라오케 수요 증가.</p>
+                        </li>
+                        <li class="trend-item">
+                            <span class="trend-rank">ISSUE 03</span>
+                            <a href="/analysis" class="trend-link">여의도 및 마포 상권, 평일 비즈니스 클럽 수요의 집중화</a>
+                            <p class="trend-desc">주말 공동화 현상이 뚜렷한 여의도 상권의 주중 밀집도 패턴 분석 결과.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">업종별 핵심 요약</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">각 업종별 고유의 특징과 시스템적 차이를 객관적으로 분류한 기준입니다.</p>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="border-left: 2px solid var(--accent-gold); padding-left: 12px;">
+                            <h4 style="font-size: 0.95rem; color: var(--text-primary);">셔츠룸 / 하이퍼블릭</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">대중화된 정찰제 시스템, 높은 접근성</p>
+                        </div>
+                        <div style="border-left: 2px solid var(--accent-gold); padding-left: 12px;">
+                            <h4 style="font-size: 0.95rem; color: var(--text-primary);">가라오케</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">대형 규모, 단체 모임 및 이벤트 최적화</p>
+                        </div>
+                        <div style="border-left: 2px solid var(--accent-gold); padding-left: 12px;">
+                            <h4 style="font-size: 0.95rem; color: var(--text-primary);">쩜오 / 텐카페</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">프라이빗 멤버십, 소수 정예 비즈니스 성격</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- Section 2: Deep Dive Cards -->
+        <h2 class="section-title">주요 상권별 분석 칼럼</h2>
+        <div class="card-grid">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-tag">GANGNAM ZONE</span>
+                    <h3 class="card-title">강남 야간 상권의 변화: 강남역 vs 청담동의 극단적 대조</h3>
+                    <p class="card-desc">강남역 중심의 대중형 업종 밀집 구역과 청담·신사 중심의 프라이빗 하이엔드 구역의 소비 패턴 차이를 객관적인 유동인구 지표를 바탕으로 심층 분석합니다.</p>
+                    <a href="/analysis" class="card-btn">칼럼 읽기 <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-tag">MAPO / YEOUIDO</span>
+                    <h3 class="card-title">금융 허브 여의도와 배후지 마포의 주중 소비 집중 분석</h3>
+                    <p class="card-desc">목요일 밤에 집중되는 여의도 직장인 상권의 특징과, 마포 공덕 지역의 비즈니스클럽 및 가라오케 상권의 연계성을 데이터로 검증합니다.</p>
+                    <a href="/analysis" class="card-btn">칼럼 읽기 <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-tag">SYSTEM INFORMATION</span>
+                    <h3 class="card-title">초보자를 위한 업종별 요금 구조 가이드북</h3>
+                    <p class="card-desc">타임비, 룸비, 주류 비용 등 처음 접할 때 혼란스럽기 쉬운 유흥 업종별 과금 공식을 완벽히 정리하여 불필요한 과다 지출을 예방하는 현실 가이드.</p>
+                    <a href="/guide" class="card-btn">가이드 보기 <span>→</span></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 class="faq-title">자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <h3 class="faq-question">셔츠룸과 하이퍼블릭의 가장 큰 차이점은 무엇인가요?</h3>
+                    <p class="faq-answer">기본적으로 두 업종 모두 투명한 시간제 및 정찰제 방식을 기반으로 운영됩니다. 다만, 서비스의 형태와 내부 로테이션 시스템, 그리고 선호되는 연령대 및 분위기에서 미세한 차이를 보입니다. 상세한 시스템적 차이는 '업종 가이드' 메뉴에서 세부 비교표를 통해 확인하실 수 있습니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">요금이 투명하지 않은 업소를 피하는 방법이 있을까요?</h3>
+                    <p class="faq-answer">방문 전 사전 문의를 통해 '기본 세트 요금', '시간당 연장 비용(타임비)', '기타 봉사료 및 세금' 포함 여부를 명확히 확인하는 것이 중요합니다. 신뢰할 수 있는 플랫폼이나 분석 정보 사이트의 객관적 지표를 사전 확인하는 습관이 불필요한 과다 지출을 막는 최선의 방법입니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">강남 외 지역(마포, 여의도 등)의 상권 강점은 무엇인가요?</h3>
+                    <p class="faq-answer">강남 상권이 다양성과 규모 면에서 압도적이라면, 마포나 여의도는 직장인 중심의 비즈니스 목적에 부합하는 전문적이고 차분한 분위기의 업소가 주를 이룹니다. 유동인구가 평일 야간에 집중되는 경향이 뚜렷하므로, 주말보다는 평일 방문 시 상권 활성도가 훨씬 높습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <h2 class="cta-title">투명한 상권 분석 데이터를 한눈에</h2>
+            <p class="cta-desc">서울 야간 상권의 객관적인 동향과 업종별 정확한 가이드를 통해 현명한 선택 기준을 마련해 드립니다.</p>
+            <a href="/analysis" class="cta-btn">상권 분석 리포트 확인하기</a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <a href="/" class="logo" style="margin-bottom: 16px;">Gangnam Night Zone</a>
+                    <p>서울 주요 상권의 업종별 밀집도와 특징을 객관적인 지표로 분석하는 전문 정보 블로그입니다. 본 사이트는 투명한 정보 제공과 건전한 소비 환경 구축을 목적으로 운영됩니다.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-col">
+                        <h4>상권 분석</h4>
+                        <ul>
+                            <li><a href="/analysis">강남 상권</a></li>
+                            <li><a href="/analysis">여의도 상권</a></li>
+                            <li><a href="/analysis">마포 상권</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h4>업종 가이드</h4>
+                        <ul>
+                            <li><a href="/guide">셔츠룸 안내</a></li>
+                            <li><a href="/guide">가라오케 안내</a></li>
+                            <li><a href="/guide">하이퍼블릭 안내</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gangnam Night Zone. All rights reserved.</p>
+                <p style="font-size: 0.75rem;">본 사이트에서 제공되는 분석 자료는 시장 조사 및 공개 데이터를 기반으로 작성된 주관적 의견을 포함하고 있으며, 특정 업소의 방문을 강요하거나 보증하지 않습니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Logic
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '64px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'var(--bg-secondary)';
+                navLinks.style.padding = '20px';
+                navLinks.style.borderBottom = '1px solid var(--border-color)';
+            }
+        });
+
+        // FAQ Accordion Toggle
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(q => {
+            q.addEventListener('click', () => {
+                const answer = q.nextElementSibling;
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                    q.style.color = 'var(--accent-gold)';
+                } else {
+                    answer.style.display = 'none';
+                    q.style.color = 'var(--text-primary)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
