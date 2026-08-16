@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 · t2-letter-gangnam-night-zone</title>
+  <meta name="description" content="t2-letter-gangnam-night-zone에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://letter.gangnam-night-zone.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* CSS Reset & Variables based on Noir-Gold Design System */
+ :root {
+ --bg-color: #080808;
+ --card-bg: #121214;
+ --text-primary: #f5f5f7;
+ --text-secondary: #86868b;
+ --accent-gold: #c5a880;
+ --accent-gold-hover: #e5cda8;
+ --border-color: #1c1c1e;
+ --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+ --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+ }
+
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ }
+
+ body {
+ background-color: var(--bg-color);
+ color: var(--text-primary);
+ font-family: var(--font-sans);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+
+ a {
+ color: inherit;
+ text-decoration: none;
+ transition: var(--transition-smooth);
+ }
+
+ /* Layout & Grid Constraints */
+ .container {
+ width: 100%;
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+
+ /* Navigation Header */
+ header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background-color: rgba(8, 8, 8, 0.85);
+ backdrop-filter: blur(20px);
+ -webkit-backdrop-filter: blur(20px);
+ border-bottom: 1px solid var(--border-color);
+ z-index: 1000;
+ }
+
+ .nav-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 64px;
+ }
+
+ .logo {
+ font-size: 16px;
+ font-weight: 700;
+ letter-spacing: 0.1em;
+ color: var(--accent-gold);
+ text-transform: uppercase;
+ }
+
+ nav {
+ display: flex;
+ gap: 32px;
+ }
+
+ nav a {
+ font-size: 13px;
+ color: var(--text-secondary);
+ font-weight: 500;
+ letter-spacing: 0.05em;
+ }
+
+ nav a:hover, nav a.active {
+ color: var(--accent-gold);
+ }
+
+ /* Mobile Hamburger Menu */
+ .menu-toggle {
+ display: none;
+ background: none;
+ border: none;
+ color: var(--text-primary);
+ font-size: 24px;
+ cursor: pointer;
+ }
+
+ /* Hero Section */
+ .hero {
+ padding-top: 180px;
+ padding-bottom: 100px;
+ border-bottom: 1px solid var(--border-color);
+ }
+
+ .tagline {
+ font-size: 14px;
+ font-weight: 600;
+ color: var(--accent-gold);
+ text-transform: uppercase;
+ letter-spacing: 0.2em;
+ margin-bottom: 24px;
+ }
+
+ h1 {
+ font-size: 48px;
+ font-weight: 800;
+ line-height: 1.15;
+ letter-spacing: -0.03em;
+ margin-bottom: 32px;
+ word-break: keep-all;
+ }
+
+ h1 span {
+ color: var(--accent-gold);
+ }
+
+ .hero-desc {
+ font-size: 20px;
+ color: var(--text-secondary);
+ max-width: 720px;
+ line-height: 1.6;
+ margin-bottom: 40px;
+ word-break: keep-all;
+ }
+
+ /* Editorial Narrative Flow */
+ .editorial-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 80px;
+ padding: 100px 0;
+ border-bottom: 1px solid var(--border-color);
+ }
+
+ .editorial-left h2 {
+ font-size: 32px;
+ font-weight: 700;
+ line-height: 1.25;
+ letter-spacing: -0.02em;
+ margin-bottom: 24px;
+ color: var(--text-primary);
+ }
+
+ .editorial-left p {
+ font-size: 16px;
+ color: var(--text-secondary);
+ margin-bottom: 24px;
+ line-height: 1.7;
+ }
+
+ .editorial-right {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ }
+
+ .editorial-quote {
+ font-size: 24px;
+ font-weight: 600;
+ color: var(--accent-gold);
+ line-height: 1.4;
+ border-left: 3px solid var(--accent-gold);
+ padding-left: 24px;
+ margin-bottom: 24px;
+ word-break: keep-all;
+ }
+
+ /* Pillars Section (Cards Layout) */
+ .pillars-section {
+ padding: 100px 0;
+ border-bottom: 1px solid var(--border-color);
+ }
+
+ .section-header {
+ margin-bottom: 60px;
+ text-align: center;
+ }
+
+ .section-header h2 {
+ font-size: 36px;
+ font-weight: 800;
+ margin-bottom: 16px;
+ letter-spacing: -0.02em;
+ }
+
+ .section-header p {
+ font-size: 16px;
+ color: var(--text-secondary);
+ max-width: 600px;
+ margin: 0 auto;
+ }
+
+ .pillars-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 32px;
+ }
+
+ .pillar-card {
+ background-color: var(--card-bg);
+ border: 1px solid var(--border-color);
+ padding: 48px 32px;
+ border-radius: 4px;
+ transition: var(--transition-smooth);
+ }
+
+ .pillar-card:hover {
+ border-color: var(--accent-gold);
+ transform: translateY(-4px);
+ }
+
+ .pillar-num {
+ font-size: 14px;
+ font-weight: 700;
+ color: var(--accent-gold);
+ margin-bottom: 24px;
+ font-family: monospace;
+ }
+
+ .pillar-card h3 {
+ font-size: 20px;
+ font-weight: 700;
+ margin-bottom: 16px;
+ color: var(--text-primary);
+ }
+
+ .pillar-card p {
+ font-size: 14px;
+ color: var(--text-secondary);
+ line-height: 1.6;
+ }
+
+ /* Manifesto (Bold Opinion Statement) */
+ .manifesto {
+ padding: 120px 0;
+ background-color: #0d0d0f;
+ text-align: center;
+ border-bottom: 1px solid var(--border-color);
+ }
+
+ .manifesto-content {
+ max-width: 800px;
+ margin: 0 auto;
+ }
+
+ .manifesto h2 {
+ font-size: 40px;
+ font-weight: 800;
+ color: var(--text-primary);
+ margin-bottom: 32px;
+ letter-spacing: -0.03em;
+ }
+
+ .manifesto p {
+ font-size: 18px;
+ color: var(--text-secondary);
+ line-height: 1.8;
+ margin-bottom: 40px;
+ word-break: keep-all;
+ }
+
+ .cta-btn {
+ display: inline-block;
+ background-color: var(--accent-gold);
+ color: #080808;
+ padding: 16px 36px;
+ font-size: 14px;
+ font-weight: 700;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ border-radius: 2px;
+ transition: var(--transition-smooth);
+ }
+
+ .cta-btn:hover {
+ background-color: var(--accent-gold-hover);
+ }
+
+ /* Footer */
+ footer {
+ padding: 60px 0;
+ background-color: var(--bg-color);
+ color: var(--text-secondary);
+ font-size: 12px;
+ border-top: 1px solid var(--border-color);
+ }
+
+ .footer-content {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 24px;
+ }
+
+ .footer-logo {
+ font-size: 14px;
+ font-weight: 700;
+ color: var(--accent-gold);
+ letter-spacing: 0.1em;
+ }
+
+ .footer-links {
+ display: flex;
+ gap: 24px;
+ }
+
+ .footer-links a:hover {
+ color: var(--text-primary);
+ }
+
+ .footer-disclaimer {
+ width: 100%;
+ margin-top: 32px;
+ padding-top: 24px;
+ border-top: 1px solid var(--border-color);
+ color: #555558;
+ line-height: 1.6;
+ }
+
+ /* Responsive Design */
+ @media (max-width: 991px) {
+ .editorial-grid {
+ grid-template-columns: 1fr;
+ gap: 48px;
+ }
+ .pillars-grid {
+ grid-template-columns: 1fr;
+ gap: 24px;
+ }
+ }
+
+ @media (max-width: 768px) {
+ h1 {
+ font-size: 34px;
+ }
+ .hero-desc {
+ font-size: 16px;
+ }
+ .nav-container {
+ position: relative;
+ }
+ nav {
+ display: none;
+ position: absolute;
+ top: 64px;
+ left: 0;
+ width: 100%;
+ background-color: var(--bg-color);
+ flex-direction: column;
+ padding: 24px;
+ border-bottom: 1px solid var(--border-color);
+ gap: 16px;
+ }
+ nav.active {
+ display: flex;
+ }
+ .menu-toggle {
+ display: block;
+ }
+ .manifesto h2 {
+ font-size: 28px;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 · t2-letter-gangnam-night-zone">
+  <meta property="og:description" content="t2-letter-gangnam-night-zone에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://letter.gangnam-night-zone.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container nav-container">
+ <a href="/" class="logo">GANGNAM ZONE</a>
+ <button class="menu-toggle" aria-label="메뉴 열기" onclick="toggleMenu()">☰</button>
+ <nav id="main-nav">
+ <a href="/">홈</a>
+ <a href="/about" class="active">소개</a>
+ <a href="/analysis">상권 분석</a>
+ <a href="/guide">업종 가이드</a>
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 15개</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-11lbhoh.html">데커드의 유니콘 꿈: IMDB 3점대 영화가 가르쳐준 연출의 배신</a>
+        <p class="post-item__summary">릴리트가 유니콘을 바라보는 그 장면, 데커드의 손이 허공을 더듬는 그 몽환적인 5초는 사실 1982년 극장판엔 없었다. 내가 처음 이걸 알았을 때 느낀 건 배신감이었다. 그동안 유니콘 꿈을 레플리칸</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-lyml3v.html">강남과 마포 그 사이, 사장님 계산기 두드리는 소리가 내 귀에만 들리는 이유</a>
+        <p class="post-item__summary">양주 한 병에 29만 원짜리 세트, 원가율이 고작 14.5%라는 걸 뻔히 알면서도 결국 지갑을 열었던 지난 목요일 밤 11시 45분의 패배는 너무 뼈아픕니다... 😭💔 겉으로는 호기롭게 &quot;골든블</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-hzprjy.html">유흥 상권 정보 현장에서 확인한 선택 기준과 주의점</a>
+        <p class="post-item__summary">서울 주요 유흥 상권은 지역에 따라 고유한 특성과 분위기를 형성하고 있습니다. 강남, 홍대, 이태원, 건대 등 대표적인 지역마다 방문하는 연령층과 선호하는 업종 형태가 크게 다릅니다. 이 때문에 목</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-1nrynsk.html">홍대 골목에서 사장 몰래 원가 계산기 두드리던 엑셀 괴물이 본 2023 잔혹사</a>
+        <p class="post-item__summary">홍대 메인 상권에 권리금 수억 원을 주고 들어가기만 하면, 금요일 밤마다 몰려드는 인파가 전부 내 돈이 될 것 같습니까?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-rhwq5b.html">사장님 몰래 계산기 두드리는 단골의 룸 서비스 원가 분석 썰</a>
+        <p class="post-item__summary">2023년 연말, 합정동 한 골목에 있는 지인의 룸에 들렀다. 사장님은 잠시 화장실 간 사이, 나는 메뉴판과 계산기를 붙들고 앉아 있었다. &quot;야, 너 거기서 뭐 하냐?&quot; 돌아와서 하는 말이 아니라,</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-hapuro.html">정보 블로그 해결 방법 총정리</a>
+        <p class="post-item__summary">안녕하세요! 어떤 작업을 도와드릴까요?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-16madvg.html">유흥 상권 정보 vs 유흥 상권 정보 비교</a>
+        <p class="post-item__summary">안녕하세요! 어떤 작업을 도와드릴까요?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-7ck31w.html">프리즘 7페이지가 말해준 정보 격차</a>
+        <p class="post-item__summary">2013년 6월 첫째 주, 'PRISM' 검색량이 전주 대비 4,710% 치솟았다. 내가 구글 트렌드 익스텐션을 연결해서 구버전 UI로 실제 지표를 찍어보니 정확히 4,713%였는데, 그 시점 이미</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-qkkfly.html">권리금 2억짜리 장부의 배신, 유흥 상권 정보 속 진짜 마진율을 까발려 주마</a>
+        <p class="post-item__summary">권리금 2억을 받고 화려하게 권리 회수를 하고 나간 강남역 이면도로의 A 업소와, 무권리로 들어와 6개월 만에 보증금까지 까먹고 야반도주한 B 업소의 임대차 계약서상 실거래 내역서는 놀랍게도 소수점</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-1xqb13n.html">권리금 2억의 판타지와 가라오케 마진율의 벌거벗은 민낯</a>
+        <p class="post-item__summary">2023년 11월 14일 밤, 마포구 서교동의 한 지하 가라오케 골목에서 나는 권리금 2억 원짜리 양도양수 계약서의 이면 합의서와 실거래 내역서를 넘겨받았다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-obs5aw.html">방구석에서 까보니 이게 진짜더라</a>
+        <p class="post-item__summary">2022년 3월 초, 한 인디 개발자 친구의 게임이 스팀에서 내려갔어. 출시 3일 만이었지. 당연히 본인은 멘탈이 나갔고, 나는 “왜 하필 3일 만에 내려갔을까”라는 의문을 데이터 단위로 까보기 시</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-1dmgvnv.html">유흥 상권 정보에 대한 통념과 실제 차이를 검토했다</a>
+        <p class="post-item__summary">서울의 다양한 유흥 상권 정보는 유동 인구와 업종 밀집도에 따라 끊임없이 변화합니다. 많은 이들이 특정 지역의 밤거리가 언제나 동일한 규모의 소비 흐름을 유지할 것이라고 오해하지만, 실제 상권의 역</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-1uc1y0c.html">유흥 상권 정보 관련 질문을 상황별로 정리해봤다</a>
+        <p class="post-item__summary">서울의 주요 유흥 상권은 지하철역과 대중교통 이용이 편리한 역세권을 중심으로 형성되어 있습니다. 강남, 홍대, 이태원, 건대 등 각 지역은 방문객의 연령대와 선호하는 분위기에 따라 고유한 특색을 지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-1jslgdc.html">홍대 폐업의 보이지 않는 진짜 이유</a>
+        <p class="post-item__summary">다들 홍대 상권이 망한 이유를 임대료 폭등이나 배달앱 수수료 탓으로 돌린다. 그런데 눈에 보이는 숫자만 따라가면 본질을 놓친다. 나는 지난 3년간 홍대입구역 9번 출구 인근에서 문 닫은 업소 20곳</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-hsyb3j.html">사장이 서비스라며 생색낼 때 속으로 비웃는 이유, 룸 가격표의 추악한 원가 계산서</a>
+        <p class="post-item__summary">남들은 비싼 양주가 깔리는 VIP 룸이 마진의 꽃이라고 믿지만, 사실 사장의 지갑을 가장 두껍게 채우는 건 연출된 저가형 룸의 '마른안주와 기본 세트'다. 최고급 싱글몰트 위스키를 주문하면 대단한 </p>
+      </li>
+      </ul>
+
+    </main>
+  </div>
+</body>
+</html>
